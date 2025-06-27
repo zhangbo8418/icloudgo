@@ -155,6 +155,7 @@ func newDownloadCommand(c *cli.Context) (*downloadCommand, error) {
 		CookieDir:       cmd.CookieDir,
 		TwoFACodeGetter: &internal.StdinTextGetter{Tip: "2fa code"},
 		Domain:          cmd.Domain,
+		Password:        cmd.Password,
 	})
 	if err != nil {
 		return nil, err
