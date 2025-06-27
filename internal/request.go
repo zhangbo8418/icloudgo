@@ -32,7 +32,7 @@ func (r *Client) requestStream(req *rawReq) (io.ReadCloser, error) {
 func (r *Client) doRequest(req *rawReq) (string, io.ReadCloser, error) {
 	status := 0
 
-	res := r.httpCli.New(req.Method, req.URL).WithURLCookie("https://icloud.com.cn")
+	res := r.httpCli.New(req.Method, req.URL)
 	if len(req.Headers) > 0 {
 		res = res.WithHeaders(req.Headers)
 	}
