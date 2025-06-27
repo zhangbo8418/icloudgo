@@ -103,6 +103,7 @@ func newClient(option *ClientOption) (*Client, error) {
 	}
 
 	cli.appleID = option.AppID
+	cli.password = option.Password
 
 	cli.httpCli = gorequests.NewSession(
 		fmt.Sprintf("%s/session.json", cli.cookieDir),
